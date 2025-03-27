@@ -1,10 +1,10 @@
-from weasyprint import HTML
+import pdfkit
 import os
 import sys
 
 def convert_html_to_pdf(html_path, pdf_path=None):
     """
-    Convert an HTML file to PDF using WeasyPrint
+    Convert an HTML file to PDF using pdfkit (wkhtmltopdf)
     
     Args:
         html_path (str): Path to the HTML file
@@ -28,9 +28,20 @@ def convert_html_to_pdf(html_path, pdf_path=None):
         abs_html_path = os.path.abspath(html_path)
         base_url = os.path.dirname(abs_html_path)
         
+        # Configure options for wkhtmltopdf
+        options = {
+            'page-size': 'A4',
+            'margin-top': '0.75in',
+            'margin-right': '0.75in',
+            'margin-bottom': '0.75in',
+            'margin-left': '0.75in',
+            'encoding': 'UTF-8',
+            'enable-local-file-access': None  # Allow access to local files
+        }
+        
         # Convert HTML to PDF
         print(f"Converting {html_path} to PDF...")
-        HTML(filename=abs_html_path, base_url=base_url).write_pdf(pdf_path)
+        pdfkit.from_file(abs_html_path, pdf_path, options=options)
         print(f"PDF created successfully at: {pdf_path}")
         return pdf_path
     except Exception as e:
