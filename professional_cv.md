@@ -1,17 +1,22 @@
 # CURRICULUM VITAE
 
-## [Your Name]
+## Vaios Laschos
 **Mathematician & Machine Learning Researcher**
 
-**Email:** [your.email@example.com]  
-**Phone:** [+XX XXX XXX XXXX]  
-**LinkedIn:** [linkedin.com/in/yourname]  
+**Email:** artnoage@gmail.com  
+**Phone:** +15780744980  
+**LinkedIn:** https://www.linkedin.com/in/vaios-laschos-882b01b6  
+**Portfolio:** https://Metaskepsis.com  
+**Hugging Face:** https://huggingface.co/Metaskepsis  
+**GitHub:** https://github.com/artnoage?tab=repositories  
 
 ---
 
 ## PROFESSIONAL SUMMARY
 
-Mathematician with extensive postdoctoral experience, specializing in the intersection of mathematics and machine learning. Background in Pure Mathematics with a PhD in Applied Mathematics, focusing on Large Deviation Theory and Gradient Flows. Evolved from studying abstract mathematical questions to applied fields with connections to natural sciences and machine learning. Currently working with Bayesian tools for machine learning and general optimization.
+Mathematician with extensive postdoctoral experience, specializing in the intersection of mathematics and machine learning. Background in Pure Mathematics with a PhD in Applied Mathematics, focusing on Large Deviation Theory and Gradient Flows on spaces of probability measures (a.k.a Wasserstein space). Evolved from studying abstract mathematical questions to applied fields with connections to natural sciences and machine learning.
+
+During my career I changed various research topics in an never ending quest of finding a topic that exhibits the golden ratio between challenge and impact. Currently I am working in a group where Bayesian tools are used for machine learning and general optimization. In the last two years, I have been polishing my ML skills with an emphasis on everything related to Large Language Models (LLMs), including developing various projects (portfolio available at Metaskepsis.com) and training LLMs for reasoning (portfolio available at huggingface.co/Metaskepsis). Currently running a seminar for my entire organization (WIAS) where I educate colleagues on the uses of LLMs with the scope of facilitating new research on the topic.
 
 ---
 
@@ -66,6 +71,10 @@ Focus on Real Analysis
 - Optimal Transportation
 
 ### Machine Learning & AI
+- Large Language Models (LLMs)
+- LLM Training for Reasoning
+- Optimal Transport for Machine Learning
+- Generative Networks with Optimal Transport
 - Reinforcement Learning
 - Meta-learning
 - Generative Adversarial Networks
@@ -159,30 +168,30 @@ Attended Summer school on Fractal Geometry, studying Baire category of continuou
 ## SKILLS
 
 ### Technical Skills
-- Operating Systems: ★★★★★☆
-- LaTeX: ★★★★★☆
-- Git: ★★★★☆☆
-- Python: ★★★★☆☆
-- Haskell: ★★★☆☆☆
+- Operating Systems: ★★★★★☆ (5.5/6)
+- LaTeX: ★★★★★☆ (5.5/6)
+- Git: ★★★★☆☆ (4.5/6)
+- Python: ★★★★☆☆ (4/6)
+- Haskell: ★★★☆☆☆ (3.5/6)
 
 ### Languages
-- Greek: ★★★★★☆ (Native)
-- English: ★★★★★☆ (Fluent)
-- German: ★★★☆☆☆ (Intermediate)
-- Spanish: ★★★☆☆☆ (Intermediate)
+- Greek: ★★★★★☆ (Native) (5.5/6)
+- English: ★★★★★☆ (Fluent) (5/6)
+- German: ★★★☆☆☆ (Intermediate) (3/6)
+- Spanish: ★★★☆☆☆ (Intermediate) (3/6)
 
 ### Soft Skills
-- Problem Solving: ★★★★★☆
-- Teamwork: ★★★★★☆
-- Listening: ★★★★★★
-- Flexibility: ★★★★★☆
-- Nonverbal Communication: ★★★★★☆
+- Listening: ★★★★★★ (6/6)
+- Problem Solving: ★★★★★☆ (5.5/6)
+- Teamwork: ★★★★★☆ (5.5/6)
+- Flexibility: ★★★★★☆ (5/6)
+- Public Speaking: ★★☆☆☆☆ (2/6)
 
 ---
 
 ## PERSONAL INTERESTS
 
-Climbing, Yoga, Travelling, Cooking, Trying random sports, Making decisions that take me far away from my comfort zone, and then complaining about it.
+Climbing, Yoga, Travelling, Cooking, Trying random sports, Making decisions that take me far away from my comfort zone, and then complaining about those decisions.
 
 ---
 
