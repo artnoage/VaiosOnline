@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic CV | Mathematician & ML Researcher</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --light-text: #7f8c8d;
+            --section-spacing: 2rem;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            margin-bottom: 1rem;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #aaa;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links li a:hover {
+            color: var(--secondary-color);
+        }
+        
+        section {
+            padding: var(--section-spacing) 0;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--light-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: white;
+            border: 4px solid var(--secondary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid var(--light-color);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+        
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid var(--light-color);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+        
+        .right::after {
+            left: -13px;
+        }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .date {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        
+        .institution {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .position {
+            font-style: italic;
+            color: var(--light-text);
+            margin-bottom: 0.5rem;
+        }
+        
+        .description {
+            margin-top: 0.5rem;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .skill-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--light-color);
+        }
+        
+        .skill-item {
+            margin-bottom: 1rem;
+        }
+        
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.3rem;
+        }
+        
+        .skill-bar {
+            height: 8px;
+            background-color: var(--light-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .skill-level {
+            height: 100%;
+            background-color: var(--secondary-color);
+        }
+        
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .research-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .research-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .research-card-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+        }
+        
+        .research-card-body {
+            padding: 1.5rem;
+        }
+        
+        .research-card-body ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .publications-summary {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+        
+        .stat-label {
+            color: var(--light-text);
+        }
+        
+        .teaching-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        .teaching-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .supervision-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .supervision-area {
+            background-color: var(--light-color);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        
+        .supervision-area h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .interest-tag {
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            margin: 1rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+            
+            .left::after, .right::after {
+                left: 18px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+            
+            .skills-container, .research-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-img">VL</div>
+                <h1>Vaios Laschos</h1>
+                <p class="title">Mathematician & Machine Learning Researcher</p>
+                <div class="contact-info">
+                    <a href="mailto:artnoage@gmail.com">Email</a>
+                    <a href="tel:+15780744980">Phone</a>
+                    <a href="https://www.linkedin.com/in/vaios-laschos-882b01b6">LinkedIn</a>
+                    <a href="https://Metaskepsis.com">Portfolio</a>
+                    <a href="https://huggingface.co/Metaskepsis">Hugging Face</a>
+                    <a href="https://github.com/artnoage?tab=repositories">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#teaching">Teaching</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>Mathematician with extensive postdoctoral experience, specializing in the intersection of mathematics and machine learning. Background in Pure Mathematics with a PhD in Applied Mathematics, focusing on Large Deviation Theory and Gradient Flows on spaces of probability measures (a.k.a Wasserstein space). Evolved from studying abstract mathematical questions to applied fields with connections to natural sciences and machine learning.</p>
+                <p>During my career I changed various research topics in an never ending quest of finding a topic that exhibits the golden ratio between challenge and impact. Currently I am working in a group where Bayesian tools are used for machine learning and general optimization. In the last two years, I have been polishing my ML skills with an emphasis on everything related to Large Language Models (LLMs), including developing various projects (portfolio available at Metaskepsis.com) and training LLMs for reasoning (portfolio available at huggingface.co/Metaskepsis). Currently running a seminar for my entire organization (WIAS) where I educate colleagues on the uses of LLMs with the scope of facilitating new research on the topic.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Academic Appointments</h2>
+            <div class="timeline">
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="date">2021 - Present</span>
+                        <h3 class="institution">WIAS</h3>
+                        <p class="position">Postdoctoral Researcher</p>
+                        <p class="description">Bayesian methods on optimal transport, optimal transport and rough paths, algorithms on discrete optimal transport, EVIs on spaces of measures.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="date">2018 - 2020</span>
+                        <h3 class="institution">Technical University of Berlin</h3>
+                        <p class="position">Postdoctoral Researcher</p>
+                        <p class="description">Risk sensitive decision making, optimal transport and machine learning, reinforcement learning and meta-learning techniques.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="date">2015 - 2017</span>
+                        <h3 class="institution">WIAS</h3>
+                        <p class="position">Postdoctoral Researcher</p>
+                        <p class="description">Metrics on spaces of probability measures.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="date">2013 - 2015</span>
+                        <h3 class="institution">Brown University</h3>
+                        <p class="position">Postdoctoral Researcher</p>
+                        <p class="description">Large deviations for Gibbs configurations, multi-agent risk sensitive stochastic control.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="date">2013</span>
+                        <h3 class="institution">MPI Leipzig</h3>
+                        <p class="position">Guest Postdoctoral Researcher</p>
+                        <p class="description">Solutions of the Euler equation as quasigeodesics on the Wasserstein space.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="date">2009 - 2013</span>
+                        <h3 class="institution">University of Bath</h3>
+                        <p class="position">PhD in Applied Mathematics</p>
+                        <p class="description">Thesis: Wasserstein gradient flows via large deviations from thermodynamic limits of independent particle models.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="date">2005 - 2009</span>
+                        <h3 class="institution">Aristotle University of Thessaloniki</h3>
+                        <p class="position">Master in Pure Mathematics</p>
+                        <p class="description">Dissertation: Potential theory and Brownian motion.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="date">2000 - 2005</span>
+                        <h3 class="institution">Aristotle University of Thessaloniki</h3>
+                        <p class="position">Major in Pure Mathematics</p>
+                        <p class="description">Focus on Real Analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="research">
+        <div class="container">
+            <h2 class="section-title">Research</h2>
+            
+            <div class="publications-summary">
+                <h3>Publication Summary</h3>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">11+</div>
+                        <div class="stat-label">Journal Publications</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1</div>
+                        <div class="stat-label">Conference Publication</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Submitted Papers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2010-2024</div>
+                        <div class="stat-label">Publication Years</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-card-header">
+                        <h3>Mathematical Foundations</h3>
+                    </div>
+                    <div class="research-card-body">
+                        <ul>
+                            <li>Large Deviation Principle</li>
+                            <li>Gradient Flows</li>
+                            <li>Metrics on Spaces of Probabilities</li>
+                            <li>PDEs</li>
+                            <li>Fractal sets</li>
+                            <li>Optimal Transportation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-card-header">
+                        <h3>Machine Learning & AI</h3>
+                    </div>
+                    <div class="research-card-body">
+                        <ul>
+                            <li>Large Language Models (LLMs)</li>
+                            <li>LLM Training for Reasoning</li>
+                            <li>Optimal Transport for Machine Learning</li>
+                            <li>Generative Networks with Optimal Transport</li>
+                            <li>Reinforcement Learning</li>
+                            <li>Meta-learning</li>
+                            <li>Generative Adversarial Networks</li>
+                            <li>Few-Shot Learning</li>
+                            <li>Bayesian Methods</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-card-header">
+                        <h3>Optimization & Control Theory</h3>
+                    </div>
+                    <div class="research-card-body">
+                        <ul>
+                            <li>Risk-Sensitive Decision Making</li>
+                            <li>Stochastic Control Theory</li>
+                            <li>Multi-agent Systems</li>
+                            <li>Optimal Transport Applications</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-card-header">
+                        <h3>Key Research Contributions</h3>
+                    </div>
+                    <div class="research-card-body">
+                        <p>My research has advanced understanding in several areas:</p>
+                        <ul>
+                            <li>Developed new geometric properties of cones with applications on the Hellinger-Kantorovich space</li>
+                            <li>Established gradient flow structures for McKean-Vlasov equations</li>
+                            <li>Advanced exit time risk-sensitive control for cooperative agents</li>
+                            <li>Analyzed large deviations for configurations generated by Gibbs distributions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="teaching">
+        <div class="container">
+            <h2 class="section-title">Teaching & Mentorship</h2>
+            
+            <div class="teaching-container">
+                <div class="teaching-card">
+                    <h3>Teaching Experience</h3>
+                    <p>Extensive teaching experience across multiple institutions, including tutorials in Calculus and Linear Algebra as a PhD student. Served as coordinator of the Probability seminar at Brown University for two consecutive years. At TU-Berlin, conducted several seminars on advanced topics in Reinforcement Learning and co-organized a course where students completed projects related to Machine Learning or Computational Neuroscience.</p>
+                </div>
+                
+                <div class="teaching-card">
+                    <h3>Student Supervision</h3>
+                    <p>Supervised 18+ Master's theses (2019-2024) across diverse topics in machine learning, reinforcement learning, and optimal transport applications.</p>
+                    
+                    <div class="supervision-areas">
+                        <div class="supervision-area">
+                            <h4>Machine Learning & AI</h4>
+                            <ul>
+                                <li>LLM performance optimization</li>
+                                <li>Prompt engineering with RL</li>
+                                <li>Representation learning</li>
+                                <li>Few-shot classification</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="supervision-area">
+                            <h4>Reinforcement Learning</h4>
+                            <ul>
+                                <li>Generative algorithms</li>
+                                <li>Deep neuroevolution</li>
+                                <li>Ad-hoc cooperation</li>
+                                <li>Risk-sensitive RL</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="supervision-area">
+                            <h4>Optimal Transport</h4>
+                            <ul>
+                                <li>Generative adversarial learning</li>
+                                <li>Entropic optimal transport</li>
+                                <li>Sinkhorn algorithm initializations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Operating Systems</span>
+                            <span>5.5/6</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>LaTeX</span>
+                            <span>5.5/6</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Git</span>
+                            <span>4.5/6</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Python</span>
+                            <span>4/6</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 67%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Haskell</span>
+                            <span>3.5/6</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 58%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Greek</span>
+                            <span>5.5/6</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>English</span>
+                            <span>5/6</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 83%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>German</span>
+                            <span>3/6</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Spanish</span>
+                            <span>3/6</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Listening</span>
+                            <span>6/6</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Problem Solving</span>
+                            <span>5.5/6</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Teamwork</span>
+                            <span>5.5/6</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Flexibility</span>
+                            <span>5/6</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 83%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Public Speaking</span>
+                            <span>2/6</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 33%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="interests">
+        <div class="container">
+            <h2 class="section-title">Personal Interests</h2>
+            
+            <div class="interests">
+                <span class="interest-tag">Climbing</span>
+                <span class="interest-tag">Yoga</span>
+                <span class="interest-tag">Travelling</span>
+                <span class="interest-tag">Cooking</span>
+                <span class="interest-tag">Trying random sports</span>
+                <span class="interest-tag">Making decisions that take me far away from my comfort zone</span>
+                <span class="interest-tag">Complaining about those decisions</span>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 [Your Name] - Mathematician & Machine Learning Researcher</p>
+                <div class="footer-links">
+                    <a href="mailto:your.email@example.com">Email</a>
+                    <a href="https://linkedin.com/in/yourname">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
