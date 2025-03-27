@@ -86,7 +86,7 @@ def convert_with_selenium(html_path, pdf_path=None):
         chrome_options.add_argument('--window-size=1920,1080')  # Set a large window size
         
         # Set print preferences
-        appState = {
+        app_state = {
             "recentDestinations": [{
                 "id": "Save as PDF",
                 "origin": "local",
@@ -108,7 +108,7 @@ def convert_with_selenium(html_path, pdf_path=None):
         }
         
         prefs = {
-            'printing.print_preview_sticky_settings.appState': json.dumps(appState),
+            'printing.print_preview_sticky_settings.appState': json.dumps(app_state),
             'download.default_directory': os.path.dirname(os.path.abspath(pdf_path)),
             'savefile.default_directory': os.path.dirname(os.path.abspath(pdf_path))
         }
