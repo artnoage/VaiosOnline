@@ -28,6 +28,9 @@ def convert_html_to_pdf(html_path, pdf_path=None):
         abs_html_path = os.path.abspath(html_path)
         base_url = os.path.dirname(abs_html_path)
         
+        # Configure wkhtmltopdf path
+        config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
+        
         # Configure options for wkhtmltopdf
         options = {
             'page-size': 'A4',
@@ -41,7 +44,7 @@ def convert_html_to_pdf(html_path, pdf_path=None):
         
         # Convert HTML to PDF
         print(f"Converting {html_path} to PDF...")
-        pdfkit.from_file(abs_html_path, pdf_path, options=options)
+        pdfkit.from_file(abs_html_path, pdf_path, options=options, configuration=config)
         print(f"PDF created successfully at: {pdf_path}")
         return pdf_path
     except Exception as e:
