@@ -34,12 +34,20 @@ def convert_html_to_pdf(html_path, pdf_path=None):
         # Configure options for wkhtmltopdf
         options = {
             'page-size': 'A4',
-            'margin-top': '0.75in',
-            'margin-right': '0.75in',
-            'margin-bottom': '0.75in',
-            'margin-left': '0.75in',
+            'margin-top': '0.5in',
+            'margin-right': '0.5in',
+            'margin-bottom': '0.5in',
+            'margin-left': '0.5in',
             'encoding': 'UTF-8',
-            'enable-local-file-access': None  # Allow access to local files
+            'enable-local-file-access': None,  # Allow access to local files
+            'print-media-type': None,  # Use print media CSS
+            'no-background': None,  # Don't print background
+            'enable-javascript': None,  # Enable JavaScript
+            'javascript-delay': '1000',  # Wait for JavaScript to execute
+            'disable-smart-shrinking': None,  # Disable smart shrinking
+            'dpi': '300',  # Higher DPI for better quality
+            'image-dpi': '300',  # Higher DPI for images
+            'image-quality': '100'  # Maximum image quality
         }
         
         # Convert HTML to PDF
