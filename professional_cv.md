@@ -9,6 +9,7 @@
 **Portfolio:** https://Metaskepsis.com  
 **Hugging Face:** https://huggingface.co/Metaskepsis  
 **GitHub:** https://github.com/artnoage?tab=repositories  
+**ORCID:** https://orcid.org/0000-0001-8721-5335  
 
 ---
 
@@ -92,7 +93,7 @@ Focus on Real Analysis
 ## PUBLICATIONS & RESEARCH IMPACT
 
 ### Research Output
-- **11+ Journal Publications** (2010-2020)
+- **12 Journal Publications** (2010-2020)
 - **1 Conference Publication** (2019)
 - **2 Submitted Papers** (2024)
 
