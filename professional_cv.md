@@ -128,7 +128,7 @@ Journal of Functional Analysis, Electronic Journal of Probability, Mathematics o
 Extensive teaching experience across multiple institutions, including tutorials in Calculus and Linear Algebra as a PhD student. Served as coordinator of the Probability seminar at Brown University for two consecutive years. At TU-Berlin, conducted several seminars on advanced topics in Reinforcement Learning and co-organized a course where students completed projects related to Machine Learning or Computational Neuroscience.
 
 ### Student Supervision
-Supervised 18+ Master's theses (2019-2024) on diverse topics including:
+Supervised 20+ Master's theses (2019-2024) on diverse topics including:
 
 **Machine Learning & AI**
 - LLM performance optimization via genetic algorithms
